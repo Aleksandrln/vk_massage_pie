@@ -1,0 +1,36 @@
+{
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },  
+  "content_scripts": [
+    {
+      "js": [
+        "contentScript.js"
+      ],
+      "matches": [
+        "https://vk.com/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "description": "Добавляет кнопку <Показать график> в диалогах.",
+  "name": "Счетчик сообщений и посмотр вложений",
+  "permissions": [
+    "tabs",
+    "https://*.vk.com/*",
+    "unlimitedStorage",
+    "storage"
+  ],
+  "version": "1.3.0",
+  "author": "LN",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "/script/amchart/amcharts.js",
+    "/script/amchart/pie.js",
+    "/script/My.user.js",
+    "/script/vkApi.js",
+    "/bootScript.js"
+  ]
+}
